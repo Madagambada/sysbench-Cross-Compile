@@ -11,3 +11,6 @@ git checkout $(git tag | sort -V | tail -1)
 ./autogen.sh
 ./configure CFLAGS="-static -m32" LDFLAGS="-static" --host=i686-linux-gnu --with-system-luajit --without-mysql
 make -j$(nproc)
+
+mv src/sysbench ../sysbench-linux-686
+rm -r ../sysbench
