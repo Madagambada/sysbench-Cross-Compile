@@ -13,6 +13,7 @@ git clone https://github.com/akopytov/sysbench.git
 cd sysbench
 git checkout $(git tag | sort -V | tail -1)
 
+sudo rm /usr/lib/arm-linux-gnueabihf/libluajit-5.1.s*
 ./autogen.sh
 ./configure CFLAGS="-static" LDFLAGS="-static" --host=arm-linux-gnueabihf --with-system-luajit --with-system-ck --without-mysql
 make -j$(nproc)
