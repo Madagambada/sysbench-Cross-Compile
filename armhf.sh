@@ -9,7 +9,7 @@ cd sysbench
 git checkout $(git tag | sort -V | tail -1)
 
 ./autogen.sh
-./configure CFLAGS="-static -m32" LDFLAGS="-static" --host=arm-linux-gnueabihf --with-system-luajit --without-mysql
+./configure CFLAGS="-static" LDFLAGS="-static" --host=arm-linux-gnueabihf --with-system-luajit --without-mysql
 make -j$(nproc)
 
 mv src/sysbench ../sysbench-linux-armhf
