@@ -1,0 +1,14 @@
+name: Cross-Compiler
+on:
+  workflow_dispatch:
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Build docker image
+        run: |
+          docker build -t sysbench-Cross-Compile .
