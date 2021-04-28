@@ -11,4 +11,4 @@ jobs:
 
       - name: Build docker image
         run: |
-          docker build -t sysbench-Cross-Compile .
+          docker build -t sysbench-cross-compile .
