@@ -2,7 +2,7 @@
 
 dpkg --add-architecture i386
 apt update
-apt -y install make crossbuild-essential-i386 git automake libtool pkg-config libaio-dev:i386 libmysqlclient-dev:i386 libssl-dev:i386 libpq-dev:i386 libluajit-5.1-dev:i386 -y
+apt -y install make crossbuild-essential-i386 git automake libtool pkg-config libaio-dev:i386 libluajit-5.1-dev:i386 -y
 
 git clone https://github.com/akopytov/sysbench.git
 cd sysbench
